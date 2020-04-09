@@ -46,12 +46,13 @@ stephen_12 <- c('#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fd
 
 sarah_color <- c("#7F0A57", "#A64685", "#CD9ABB", "#0B447A", "#3F77AC", "#4176AA", "#74A9DD", "#007976", "#39A9AB", "#71CFC5", "#72D3C6", "#007947", "#3BAA78")
 
+julio_color <- c("#003f5c", "#2f4b7c", "#665191", "#a05195", "#d45087", "#f95d6a", "#ff7c43", "#ffa600", "#7f0a57", "#cd9abb", "#39a9ab", "#71cfc5", "#007947", "#bebebe")
 # Plot
 
 donors <- ggplot(data = subset(midas_melt, midas_melt$Treatment == "Donors"), aes(x = as.factor(Timepoint), weight = value, fill = L6)) +
   geom_bar() +
   theme_bw(base_size = 16) + facet_grid(. ~  Individual, space = "free", scales = "free") + 
-  scale_fill_manual(values = sarah_color) +
+  scale_fill_manual(values = julio_color) +
   theme(panel.spacing = unit(0.1, "lines")) +   
   theme(axis.ticks.x=element_blank()) +
   labs(x = '',
@@ -63,7 +64,7 @@ donors <- ggplot(data = subset(midas_melt, midas_melt$Treatment == "Donors"), ae
 pre_fmt <- ggplot(data = subset(midas_melt, midas_melt$Treatment == "Pre_FMT"), aes(x = as.factor(Timepoint), weight = value, fill = L6)) +
   geom_bar() +
   theme_bw(base_size = 16) + facet_grid(. ~  Individual, space = "free", scales = "free") + 
-  scale_fill_manual(values = sarah_color) +
+  scale_fill_manual(values = julio_color) +
   theme(panel.spacing = unit(0.1, "lines")) +   
   theme(axis.ticks.x=element_blank(), axis.ticks.y=element_blank(), axis.text.y = element_blank()) +
   labs(x = 'Sample',
@@ -75,7 +76,7 @@ pre_fmt <- ggplot(data = subset(midas_melt, midas_melt$Treatment == "Pre_FMT"), 
 post_fmt <- ggplot(data = subset(midas_melt, midas_melt$Treatment == "Post_FMT"), aes(x = as.factor(Timepoint), weight = value, fill = L6)) +
   geom_bar() +
   theme_bw(base_size = 16) + facet_grid(. ~  Individual, space = "free", scales = "free") + 
-  scale_fill_manual(values = sarah_color) +
+  scale_fill_manual(values = julio_color) +
   theme(panel.spacing = unit(0.1, "lines")) +   
   theme(axis.ticks.x=element_blank(), axis.ticks.y=element_blank(), axis.text.y = element_blank()) +
   labs(x = '',
