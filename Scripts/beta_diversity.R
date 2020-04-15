@@ -35,7 +35,7 @@ cb_7 <- c("#d22154",
           "#fdce5d",
           "#ccaaff",
           "#a65800",
-          "#b25566", "blue")
+          "#b25566")
 
 ggplot() + 
   geom_point(data = nmds.sites, aes(NMDS1, NMDS2, color = Individual, shape = Treatment), alpha = 0.7, size = 5) + 
