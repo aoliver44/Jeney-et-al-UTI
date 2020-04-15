@@ -1,0 +1,25 @@
+#NAME	SAMPLETYPE	Individual_name	Individual	Timepoint	Treatment	Kind	Individual_level	two_groups	Specific_donor
+D1.1	Donors	Donor 1.1	1.1	1	Donors	Donors	1_D	donor_treated	one
+D1.2	Donors	Donor 1.2	1.2	2	Donors	Donors	1_D	donor_treated	two
+D2.1	Donors	Donor 2	2	1	Donors	Donors	2_D	donor_treated	three
+D3.1	Donors	Donor 3	3	1	Donors	Donors	3_D	donor_treated	
+P10.V2	Recipients.PostFMT	Recipient 10	10	2	Post_FMT	Recipients	10_post	donor_treated	two
+P10.V3	Recipients.PostFMT	Recipient 10	10	3	Post_FMT	Recipients	10_post	donor_treated	two
+P10.V4	Recipients.PostFMT	Recipient 10	10	4	Post_FMT	Recipients	10_post	donor_treated	two
+P10.V5	Recipients.PostFMT	Recipient 10	10	5	Post_FMT	Recipients	10_post	donor_treated	two
+P7.V2	Recipients.PostFMT	Recipient 7	7	2	Post_FMT	Recipients	7_post	donor_treated	three
+P7.V3	Recipients.PostFMT	Recipient 7	7	3	Post_FMT	Recipients	7_post	donor_treated	three
+P7.V4	Recipients.PostFMT	Recipient 7	7	4	Post_FMT	Recipients	7_post	donor_treated	three
+P7.V5	Recipients.PostFMT	Recipient 7	7	5	Post_FMT	Recipients	7_post	donor_treated	three
+P8.V2	Recipients.PostFMT	Recipient 8	8	2	Post_FMT	Recipients	8_post	donor_treated	one
+P8.V3	Recipients.PostFMT	Recipient 8	8	3	Post_FMT	Recipients	8_post	donor_treated	one
+P8.V4	Recipients.PostFMT	Recipient 8	8	4	Post_FMT	Recipients	8_post	donor_treated	one
+P8.V5	Recipients.PostFMT	Recipient 8	8	5	Post_FMT	Recipients	8_post	donor_treated	one
+P9.V2	Recipients.PostFMT	Recipient 9	9	2	Post_FMT	Recipients	9_post	donor_treated	two
+P9.V3	Recipients.PostFMT	Recipient 9	9	3	Post_FMT	Recipients	9_post	donor_treated	two
+P9.V4	Recipients.PostFMT	Recipient 9	9	4	Post_FMT	Recipients	9_post	donor_treated	two
+P9.V5	Recipients.PostFMT	Recipient 9	9	5	Post_FMT	Recipients	9_post	donor_treated	two
+P10.V1	Recipients.PreFMT	Recipient 10	10	1	Pre_FMT	Recipients	10_pre	pre_fmt	two
+P7.V1	Recipients.PreFMT	Recipient 7	7	1	Pre_FMT	Recipients	7_pre	pre_fmt	three
+P8.V1	Recipients.PreFMT	Recipient 8	8	1	Pre_FMT	Recipients	8_pre	pre_fmt	one
+P9.V1	Recipients.PreFMT	Recipient 9	9	1	Pre_FMT	Recipients	9_pre	pre_fmt	two
