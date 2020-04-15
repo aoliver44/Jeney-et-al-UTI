@@ -50,11 +50,11 @@ ggplot() +
 source("parwise.adonis.r")
 permanova_data <- merge(metadata, midas, by.x = "X.NAME", by.y = "row.names")
 
-permanova_ind <- adonis(permanova_data[,8:NCOL(permanova_data)] ~ as.factor(Treatment), data = permanova_data, permutations = 999, parallel = 4, method = "bray")
+permanova_ind <- adonis(permanova_data[,11:NCOL(permanova_data)] ~ as.factor(Treatment), data = permanova_data, permutations = 999, parallel = 4, method = "bray")
 permanova_ind
 
-pairwise.adonis(x = permanova_data[,8:NCOL(permanova_data)], factors = permanova_data$Treatment, p.adjust.m = "BH")
+pairwise.adonis(x = permanova_data[,11:NCOL(permanova_data)], factors = permanova_data$Treatment, p.adjust.m = "BH")
 
 
 temp_d_r <- subset(permanova_data, permanova_data$SAMPLETYPE == "Donors" | permanova_data$Treatment == "Post_FMT")
-pairwise.adonis(x = temp_d_r[,8:NCOL(temp_d_r)], factors = temp_d_r$Individual_level, p.adjust.m = "BH")
+pairwise.adonis(x = temp_d_r[,11:NCOL(temp_d_r)], factors = temp_d_r$Treatment, p.adjust.m = "BH")
