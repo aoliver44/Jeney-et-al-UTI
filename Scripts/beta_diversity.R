@@ -7,6 +7,7 @@ library(vegan)
 library(labdsv)
 library(ggplot2)
 library(grid)
+library(tidyverse)
 
 # set working directory & load files
 setwd("~/Google Drive File Stream/My Drive/Other/Sarah_Steele/")
@@ -45,7 +46,7 @@ ggplot() +
   theme() +
   scale_color_manual(values = cb_7) + scale_fill_manual(values = cb_7) +guides(fill=guide_legend(title="Individual"))
 
-# statistics: permanova
+# statistics: permanova + pairwise
 # Thank you Pedro Martinez Arbizu
 source("parwise.adonis.r")
 permanova_data <- merge(metadata, midas, by.x = "X.NAME", by.y = "row.names")
@@ -58,3 +59,26 @@ pairwise.adonis(x = permanova_data[,11:NCOL(permanova_data)], factors = permanov
 
 temp_d_r <- subset(permanova_data, permanova_data$SAMPLETYPE == "Donors" | permanova_data$Treatment == "Post_FMT")
 pairwise.adonis(x = temp_d_r[,11:NCOL(temp_d_r)], factors = temp_d_r$Treatment, p.adjust.m = "BH")
+
+# comparisons of bray distances
+tmp <- merge(metadata, midas, by.x = "X.NAME", by.y = "row.names") 
+tmp <- subset(tmp, tmp$Individual_level != "3_D")
+tmp <- tmp %>% select(., 1, 11:NCOL(permanova_data))
+rownames(tmp) <- tmp$X.NAME
+tmp$X.NAME <- NULL
+
+tmp_bray_dist <- vegdist(tmp, method = "bray")
+
+# match up the order of the metadata based on the distance matrix
+metadata_delta <- metadata[match(rownames(as.data.frame(as.matrix(tmp_bray_dist))), metadata$X.NAME), ]
+
+# take mean distances based on individual
+ind_bcs <- meandist(tmp_bray_dist, grouping = metadata_delta$Specific_donor)
+# get the diagonal of the matrix...basically the avg within an individual
+bc_distances_diag <- as.data.frame(diag(as.matrix(ind_bcs)))
+
+tmp2 <- as.data.frame(as.matrix(tmp_diag))
+diag(tmp_diag) <- NA
+
+bc_distances_off_diag 
+
