@@ -1,6 +1,6 @@
 # UTI-FMT project
  
-This is the Github repository for the UTI project by Jeney et al. (DOI: [10.1097/AOG.0000000000004052](10.1097/AOG.0000000000004052)) investigating FMT treatment for chronic urinary tract infections. The folders above contain the necessary scripts (Scripts folder) and data for the scripts (Data) to re-make the figures present in the publication. 
+This is the Github repository for the UTI project by Jeney et al. (DOI: [10.1097/AOG.0000000000004052](https://journals.lww.com/greenjournal/Fulltext/2020/10000/Fecal_Microbiota_Transplantation_for_the_Treatment.20.aspx)) investigating FMT treatment for chronic urinary tract infections. The folders above contain the necessary scripts (Scripts folder) and data for the scripts (Data) to re-make the figures present in the publication. 
 
 This analysis was done in R. The necessary packages and versions of the ones used are listed below. 
 
